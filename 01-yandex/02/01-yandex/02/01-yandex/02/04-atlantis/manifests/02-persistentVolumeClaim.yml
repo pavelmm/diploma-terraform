@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: atlantis-data
+spec:
+  accessModes: ["ReadWriteOnce"]
+  volumeName: atlantis-data
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 5Gi
