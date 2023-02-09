@@ -47,7 +47,7 @@ pipeline {
                 echo " ============== start building image =================="
                 dir ('.') {
                 	sh """
-                    docker build -t runout/diploma-test-app:$latestTag . 
+                    docker build -t pavelmm/diploma-test-app:$latestTag . 
                     """
                 }
             }
@@ -56,7 +56,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh """
-                docker push runout/diploma-test-app:$latestTag
+                docker push pavelmm/diploma-test-app:$latestTag
                 """
             }
         }
@@ -64,7 +64,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh """
-                kubectl set image deployment.apps/diploma-test-app diploma-test-app=runout/diploma-test-app:$latestTag
+                kubectl set image deployment.apps/diploma-test-app diploma-test-app=pavelmm/diploma-test-app:$latestTag
                 """
             }
         }

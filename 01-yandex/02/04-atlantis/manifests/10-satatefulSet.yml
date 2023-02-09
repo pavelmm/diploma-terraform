@@ -70,10 +70,10 @@ spec:
           - "--enable-diff-markdown-format"
         env:
         - name: ATLANTIS_REPO_ALLOWLIST
-          value: github.com/run0ut/diploma-terraform # 2. Replace this with your own repo allowlist.
+          value: github.com/pavelmm/diploma-terraform # 2. Replace this with your own repo allowlist.
         ### GitHub Config ###
         - name: ATLANTIS_GH_USER
-          value: run0ut # 3. If you're using GitHub replace <YOUR_GITHUB_USER> with the username of your Atlantis GitHub user without the `@`.
+          value: pavelmm # 3. If you're using GitHub replace <YOUR_GITHUB_USER> with the username of your Atlantis GitHub user without the `@`.
         - name: ATLANTIS_GH_TOKEN
           valueFrom:
             secretKeyRef:

@@ -46,7 +46,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>https://github.com/run0ut/diploma-test-app.git</url>
+          <url>https://github.com/pavelmm/diploma-test-app.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>

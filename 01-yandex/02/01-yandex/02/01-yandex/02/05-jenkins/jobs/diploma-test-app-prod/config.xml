@@ -29,7 +29,7 @@
       <jenkins.branch.BranchSource>
         <source class="jenkins.plugins.git.GitSCMSource" plugin="git@4.12.1">
           <id>ca28478c-f18f-41bc-ab5e-53c66be01846</id>
-          <remote>https://github.com/run0ut/diploma-test-app.git</remote>
+          <remote>https://github.com/pavelmm/diploma-test-app.git</remote>
           <credentialsId></credentialsId>
           <traits>
             <jenkins.plugins.git.traits.TagDiscoveryTrait/>
