@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('.') {
-                	sh 'docker build -t runout/diploma-test-app:latest . '
+                	sh 'docker build -t pavelmm/diploma-test-app:latest . '
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
-                docker push runout/diploma-test-app:latest
+                docker push pavelmm/diploma-test-app:latest
                 '''
             }
         }

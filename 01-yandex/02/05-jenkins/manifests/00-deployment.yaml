@@ -40,7 +40,7 @@ spec:
       containers:
 
       - name: jenkins
-        image: runout/jenkins-with-plugins:latest
+        image: pavelmm/jenkins-with-plugins:latest
         ports:
         - containerPort: 8080
         volumeMounts:

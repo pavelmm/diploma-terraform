@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: diploma-test-app
-        image: runout/diploma-test-app:latest
+        image: pavelmm/diploma-test-app:latest
         ports:
         - containerPort: 80
