@@ -15,18 +15,18 @@ variable "yandex_compute_default_zone" {
 ################################################################################
 # DockerHub
 variable "dockerhub_login" {
-  default = "romb32"
+  default = ""
 }
 
 variable "dockerhub_password" {
-  default   = "2323Ella2323*"
+  default   = "*"
   sensitive = true
 }
 
 ################################################################################
 # GitHub
 variable "github_personal_access_token" {
-  default   = "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"
+  default   = ""
   sensitive = true
 }
 
@@ -35,5 +35,5 @@ variable "github_webhook_secret" {
 }
 
 variable "github_login" {
-  default = "pavelmm"
+  default = ""
 }
