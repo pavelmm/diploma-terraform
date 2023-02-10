@@ -206,10 +206,6 @@ ubuntu@diploma-control-prod-0:~/1$ curl ifconfig.me
 </details>  
  
 
-- Сравнение вывода списка подов для неймспейса `default` воркспейсов `prod` и `stage`
-
-    ![diploma-kubectl-prod-stage.png](media/diploma-kubectl-prod-stage.png)
-
 ---
 ### Создание тестового приложения
 
