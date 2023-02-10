@@ -56,17 +56,17 @@
     Outputs:
 
     control_nodes = [
-    "name=diploma-control-prod-0, public=178.154.231.25, private=10.0.0.12",
+    "name=diploma-control-prod-0, public=51.250.12.74, private=10.0.0.12",
     ]
     links = <<EOT
-        App: http://178.154.231.25:30080
-    Jenkins: http://178.154.231.25:30808
-    Atlantis: http://178.154.231.25:30141
-    Grafana: http://178.154.231.25:30300
+        App: http://51.250.12.74:30080
+    Jenkins: http://51.250.12.74:30808
+    Atlantis: http://51.250.12.74:30141
+    Grafana: http://51.250.12.74:30300
 
     EOT
     worker_nodes = [
-    "name=diploma-worker-prod-0, public=178.154.229.32, private=10.0.0.19",
+    "name=diploma-worker-prod-0, public=51.250.12.74, private=10.0.0.19",
     ]
     ```
 
