@@ -154,7 +154,7 @@
 
 - `kubectl` для кластера `prod` с флагом `--all-namespaces`
 
-<details><summary>diploma-control-prod-0</summary>
+
   
 ```  
 
@@ -203,7 +203,7 @@ ubuntu@diploma-control-prod-0:~/1$ curl ifconfig.me
 
 ```  
   
-</details>  
+
  
 
 ---
