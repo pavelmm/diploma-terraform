@@ -152,11 +152,59 @@
 > 2. В файле `~/.kube/config` находятся данные для доступа к кластеру.
 > 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
 
-`config` сохранил в отдельную папку, т.к. их два - для воркспейса `stage` и воркспейса `prod`
-
 - `kubectl` для кластера `prod` с флагом `--all-namespaces`
 
-    ![kubectl-diploma.png](media/kubectl-diploma.png)
+<details><summary>diploma-control-prod-0</summary>
+  
+```  
+
+ubuntu@diploma-control-prod-0:~$ kubectl get nodes
+error: error loading config file "/etc/kubernetes/admin.conf": open /etc/kubernetes/admin.conf: permission denied
+ubuntu@diploma-control-prod-0:~$ sudo kubectl get nodes
+NAME                     STATUS   ROLES           AGE   VERSION
+diploma-control-prod-0   Ready    control-plane   34h   v1.25.6
+diploma-worker-prod-0    Ready    <none>          34h   v1.25.6
+ubuntu@diploma-control-prod-0:~$ sudo kubectl get pods --all-namespaces 
+NAMESPACE     NAME                                             READY   STATUS     RESTARTS      AGE
+default       atlantis-0                                       1/1     Running    0             34h
+default       diploma-test-app-7f9bc89454-pfwn2                1/1     Running    0             34h
+default       diploma-test-app-7f9bc89454-rpdlm                1/1     Running    0             34h
+default       diploma-test-app-7f9bc89454-wxzwl                1/1     Running    0             34h
+default       jenkins-755d9b67db-6rhg2                         2/2     Running    0             34h
+kube-system   calico-kube-controllers-75748cc9fd-wjtx6         1/1     Running    0             34h
+kube-system   calico-node-l75x9                                1/1     Running    0             34h
+kube-system   calico-node-vhwxq                                1/1     Running    0             34h
+kube-system   coredns-588bb58b94-d87z4                         1/1     Running    0             34h
+kube-system   coredns-588bb58b94-fjn5t                         1/1     Running    0             34h
+kube-system   dns-autoscaler-5b9959d7fc-jr5nf                  1/1     Running    0             34h
+kube-system   kube-apiserver-diploma-control-prod-0            1/1     Running    1             34h
+kube-system   kube-controller-manager-diploma-control-prod-0   1/1     Running    2 (34h ago)   34h
+kube-system   kube-proxy-4hkbv                                 1/1     Running    0             34h
+kube-system   kube-proxy-bq7gg                                 1/1     Running    0             34h
+kube-system   kube-scheduler-diploma-control-prod-0            1/1     Running    2 (34h ago)   34h
+kube-system   nginx-proxy-diploma-worker-prod-0                1/1     Running    0             34h
+kube-system   nodelocaldns-gpfpd                               1/1     Running    0             34h
+kube-system   nodelocaldns-rxzt5                               1/1     Running    0             34h
+monitoring    alertmanager-main-0                              2/2     Running    1 (34h ago)   34h
+monitoring    alertmanager-main-1                              2/2     Running    1 (34h ago)   34h
+monitoring    alertmanager-main-2                              2/2     Running    1 (34h ago)   34h
+monitoring    blackbox-exporter-59cccb5797-v2sh9               3/3     Running    0             34h
+monitoring    grafana-67b774cb88-gkclr                         1/1     Running    0             34h
+monitoring    kube-state-metrics-648ff47fd6-94zcg              3/3     Running    0             34h
+monitoring    node-exporter-4q8ll                              2/2     Running    0             34h
+monitoring    node-exporter-t9hpx                              2/2     Running    0             34h
+monitoring    prometheus-adapter-757f9b4cf9-7slzx              1/1     Running    0             34h
+monitoring    prometheus-adapter-757f9b4cf9-sgdll              1/1     Running    0             34h
+monitoring    prometheus-k8s-0                                 2/2     Running    0             34h
+monitoring    prometheus-k8s-1                                 2/2     Running    0             34h
+monitoring    prometheus-operator-5c8bd94f8c-5x8mv             2/2     Running    0             34h
+ubuntu@diploma-control-prod-0:~/1$ curl ifconfig.me
+51.250.12.74ubuntu@diploma-control-prod-0:~/1$ 
+
+```  
+  
+</details>  
+ 
 
 - Сравнение вывода списка подов для неймспейса `default` воркспейсов `prod` и `stage`
 
